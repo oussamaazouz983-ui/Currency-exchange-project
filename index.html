@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dinar.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calculator"></i> Currency Converter</h1>
+            <p class="subtitle">Fast and direct conversion between global and Arabic currencies</p>
+        </header>
+
+        <div class="converter-content">
+            <div class="converter-box">
+                <div class="input-group">
+                    <label for="amount"><i class="fas fa-money-bill-wave"></i> Amount</label>
+                    <input type="number" id="amount" placeholder="Enter amount" value="100" min="0" step="0.01">
+                </div>
+
+                <div class="input-group">
+                    <label for="from-currency">From Currency</label>
+                    <select id="from-currency">
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="SAR">Saudi Riyal (SAR)</option>
+                        <option value="AED">UAE Dirham (AED)</option>
+                        <option value="TND">Tunisian Dinar (TND)</option>
+                        <option value="DZD">Algerian Dinar (DZD)</option>
+                        <option value="EGP">Egyptian Pound (EGP)</option>
+                        <option value="JOD">Jordanian Dinar (JOD)</option>
+                    </select>
+                </div>
+
+                <div class="swap-container">
+                    <button class="swap-btn" id="swap-currencies">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                </div>
+
+                <div class="input-group">
+                    <label for="to-currency">To Currency</label>
+                    <select id="to-currency">
+                        <option value="TND">Tunisian Dinar (TND)</option>
+                        <option value="DZD">Algerian Dinar (DZD)</option>
+                        <option value="SAR">Saudi Riyal (SAR)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="AED">UAE Dirham (AED)</option>
+                        <option value="EGP">Egyptian Pound (EGP)</option>
+                        <option value="JOD">Jordanian Dinar (JOD)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="result-box">
+                <div class="result-label">Converted Value</div>
+                <div id="currency-result" class="result-value">312.00 TND</div>
+                <div class="result-detail" id="currency-detail">100 US Dollar = 312.00 Tunisian Dinar</div>
+            </div>
+
+            <div class="exchange-rate" id="currency-rate">
+                <i class="fas fa-info-circle"></i> Current Exchange Rate: 1 US Dollar = 3.12 Tunisian Dinar
+            </div>
+
+            <div class="last-update">
+                <i class="fas fa-redo"></i> Result updates automatically when any value changes
+            </div>
+        </div>
+    </div>
+
+    <script src="currencyexchange.js"></script>
+</body>
+
+</html>
